@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/sagiv-wedding",
+            "outputPath": "dist/sagiv-wedding/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -97,6 +97,60 @@
             ],
             "scripts": []
           }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/sagiv-wedding/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json",
+            "inlineStyleLanguage": "scss"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media"
+            },
+            "development": {
+              "optimization": false,
+              "sourceMap": true,
+              "extractLicenses": false,
+              "vendorChunk": true
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "configurations": {
+            "development": {
+              "browserTarget": "sagiv-wedding:build:development",
+              "serverTarget": "sagiv-wedding:server:development"
+            },
+            "production": {
+              "browserTarget": "sagiv-wedding:build:production",
+              "serverTarget": "sagiv-wedding:server:production"
+            }
+          },
+          "defaultConfiguration": "development"
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "routes": [
+              "/"
+            ]
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "sagiv-wedding:build:production",
+              "serverTarget": "sagiv-wedding:server:production"
+            },
+            "development": {
+              "browserTarget": "sagiv-wedding:build:development",
+              "serverTarget": "sagiv-wedding:server:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
