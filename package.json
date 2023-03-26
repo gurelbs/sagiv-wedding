@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build:dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev": "ng run sagiv-wedding:serve-ssr",
     "serve:ssr": "node dist/sagiv-wedding/server/main.js",
     "build:ssr": "ng build && ng run sagiv-wedding:server",
-    "prerender": "ng run sagiv-wedding:prerender"
+    "prerender": "ng run sagiv-wedding:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
