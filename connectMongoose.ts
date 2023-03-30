@@ -3,9 +3,9 @@ import mongoose, { ConnectOptions } from "mongoose";
 
 export function connectMongoose(){
     config()
-    const { USER, PASSWORD } = process.env;    
+    const { MONGODB_URI } = process.env;    
     try {
-        mongoose.connect(`mongodb+srv://${USER}:${PASSWORD}@cluster0.rmxncwd.mongodb.net/test`, {
+        mongoose.connect(MONGODB_URI ?? '', {
             useNewUrlParser: true,
             useUnifiedTopology: true
         } as ConnectOptions).then(() => console.log('connected to MongoDB server successfully'))
