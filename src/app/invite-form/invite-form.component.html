@@ -1,0 +1,40 @@
+<form [formGroup]="rsvpForm" (ngSubmit)="onSubmit()">
+    <p>
+        <mat-form-field>
+            <mat-label>שם פרטי</mat-label>
+            <input matInput placeholder="מה השם הפרטי שלך">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>שם משפחה</mat-label>
+            <input matInput placeholder="ועכשיו השם משפחה">
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>האם בכוונך להגיע לחתונה?</mat-label>
+            <mat-select formControlName="isAttending" required>
+              <mat-option value="Yes">כן</mat-option>
+              <mat-option value="No">לא</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field>
+            <mat-label>כמה תהיו?</mat-label>
+            <mat-select formControlName="guests">
+              <mat-option value="1" ngDefaultControl>1</mat-option>
+              <mat-option value="2">2</mat-option>
+              <mat-option value="3">3</mat-option>
+              <mat-option value="4">4</mat-option>
+              <mat-option value="5">5</mat-option>
+              <mat-option value="6">6</mat-option>
+              <mat-option value="7">7</mat-option>
+              <mat-option value="8">8</mat-option>
+              <mat-option value="9">9</mat-option>
+              <mat-option value="10">10</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </p>
+</form>

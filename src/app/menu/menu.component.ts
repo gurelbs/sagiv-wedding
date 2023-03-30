@@ -2,11 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { DeviceService } from '../devices.service';
 
 @Component({
-  selector: 'app-form',
-  templateUrl: './form.component.html',
-  styleUrls: ['./form.component.scss']
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
+  styleUrls: ['./menu.component.scss']
 })
-export class FormComponent implements OnInit {
+export class MenuComponent implements OnInit {
   constructor(private deviceService: DeviceService) { }
   devices!: { isMobile: boolean, isDesktop: boolean};
   
