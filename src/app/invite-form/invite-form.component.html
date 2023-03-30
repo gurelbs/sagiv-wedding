@@ -2,13 +2,13 @@
     <p>
         <mat-form-field>
             <mat-label>שם פרטי</mat-label>
-            <input matInput placeholder="מה השם הפרטי שלך">
+            <input  formControlName="name" required matInput placeholder="מה השם הפרטי שלך">
         </mat-form-field>
     </p>
     <p>
         <mat-form-field>
             <mat-label>שם משפחה</mat-label>
-            <input matInput placeholder="ועכשיו השם משפחה">
+            <input formControlName="familyName" required matInput placeholder="ועכשיו השם משפחה">
         </mat-form-field>
     </p>
     <p>
@@ -23,7 +23,7 @@
     <p>
         <mat-form-field>
             <mat-label>כמה תהיו?</mat-label>
-            <mat-select formControlName="guests">
+            <mat-select formControlName="guestsNumber" required>
               <mat-option value="1" ngDefaultControl>1</mat-option>
               <mat-option value="2">2</mat-option>
               <mat-option value="3">3</mat-option>
@@ -37,4 +37,5 @@
             </mat-select>
         </mat-form-field>
     </p>
+    <button type="submit" class="btn btn-primary">שליחה</button>
 </form>
