@@ -1,14 +1,14 @@
 <p>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>החתונה של חן ושגיב</span>
+      <a href="/">החתונה של חן ושגיב</a>
       <span class="spacer"></span>
       <button mat-menu-item [matMenuTriggerFor]="menu">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>מידע</button>
-        <button mat-menu-item>לאישור הזמנה</button>
+        <a mat-menu-item href="/">מידע</a>
+        <a mat-menu-item href="/invitation">לאישור הזמנה</a>
       </mat-menu>
     </mat-toolbar-row>
   </mat-toolbar>

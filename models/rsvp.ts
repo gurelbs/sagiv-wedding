@@ -1,10 +1,10 @@
 import { connection, Schema } from "mongoose";
 
-interface Invite {
+export interface Invite {
     name: string;
     familyName: string;
     guestsNumber: number;
-    isAttending: string;    
+    isAttending: string;
 }
 
 const rsvpSchema = new Schema<Invite>({

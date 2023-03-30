@@ -8,7 +8,7 @@ import { join } from 'path';
 import { AppServerModule } from './src/main.server';
 import { json, urlencoded } from 'body-parser';
 import { connectMongoose } from './connectMongoose';
-import { router } from 'apiRoute/post';
+import { router } from 'apiRoute/api';
 
 export function app(): express.Express {
 
