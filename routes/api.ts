@@ -3,7 +3,7 @@ import { Invite, Rsvp } from "../models/rsvp";
 
 export const router = Router();
 
-router.post('/api/rsvp', async (req, res) => {
+router.post('/api', async (req, res) => {
     try {
         const { name, familyName, guestsNumber, isAttending }: Invite = req.body;
         const userData = await Rsvp.create({ name, familyName, guestsNumber, isAttending });

@@ -24,7 +24,7 @@ export class InviteFormComponent implements OnInit {
 
   onSubmit() {
     if (this.rsvpForm.valid) {
-      this.http.post('/api/rsvp', this.rsvpForm.value).subscribe(
+      this.http.post('/api', this.rsvpForm.value).subscribe(
         (res) => {
           console.log('Success:', res);
           localStorage.setItem('rsvp', JSON.stringify(res));
