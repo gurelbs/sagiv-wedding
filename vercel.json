@@ -5,10 +5,11 @@
     {
       "source": "/(.*)",
       "destination": "/api"
+    },
+    {
+      "source": "/invitation",
+      "destination": "/api/rsvp"
     }
-  ],
-  "routes": [
-    { "path": "/invitation", "methodS": ["POST"], "dest": "/api/rsvp"}
   ],
   "functions": {
     "api/index.js": {
