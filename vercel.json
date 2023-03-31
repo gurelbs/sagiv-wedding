@@ -5,7 +5,7 @@
       { "source": "/(.*)", "destination": "/api" }
     ],
     "functions": {
-      "api/api.js": {
+      "api/index.js": {
         "includeFiles": "dist/sagiv-wedding/browser/**"
       }
     }
