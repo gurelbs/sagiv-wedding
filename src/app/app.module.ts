@@ -21,6 +21,7 @@ import { InviteFormComponent } from './invite-form/invite-form.component';
 import { MenuComponent } from './menu/menu.component';
 import { SaveComponent } from './save/save.component';
 import { MainComponent } from './main/main.component';
+import { AllGuestsComponent } from './all-guests/all-guests.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { MainComponent } from './main/main.component';
     InviteFormComponent,
     SaveComponent,
     MainComponent,
+    AllGuestsComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),

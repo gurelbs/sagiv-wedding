@@ -22,7 +22,7 @@ router.post('/api', async (req, res) => {
     }
 });
 
-router.get('/all', async (req, res) => {
+router.get('/all-guests', async (req, res) => {
     try {
         await connectMongoose();
         const allGuests = await Rsvp.find();
