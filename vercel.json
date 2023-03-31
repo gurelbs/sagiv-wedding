@@ -2,10 +2,10 @@
     "version": 2,
     "public": true,
     "rewrites": [
-      { "source": "/(.*)", "destination": "/handler" }
+      { "source": "/(.*)", "destination": "/api" }
     ],
     "functions": {
-      "api/handler.js": {
+      "api/api.js": {
         "includeFiles": "dist/sagiv-wedding/browser/**"
       }
     }
