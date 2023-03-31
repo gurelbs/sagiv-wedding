@@ -21,3 +21,16 @@ router.post('/api', async (req, res) => {
         res.status(500).send('Failed to create RSVP');
     }
 });
+
+router.get('/all', async (req, res) => {
+    try {
+        await connectMongoose();
+        const allGuests = await Rsvp.find();
+        console.log(allGuests);
+        res.send({allGuests})
+    } catch (error) {
+        console.log('failed to get Guests list'); 
+        res.send({allGuests: undefined})
+    }
+
+})
