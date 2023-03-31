@@ -1,12 +1,18 @@
 {
-    "version": 2,
-    "public": true,
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/api:/path" }
-    ],
-    "functions": {
-      "api/index.js": {
-        "includeFiles": "dist/sagiv-wedding/browser/**"
-      }
+  "version": 2,
+  "public": true,
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/api"
     }
+  ],
+  "routes": [
+    { "path": "/invitation", "methodS": ["POST"], "dest": "/api/rsvp"}
+  ],
+  "functions": {
+    "api/index.js": {
+      "includeFiles": "dist/sagiv-wedding/browser/**"
+    }
+  }
 }
