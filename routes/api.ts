@@ -6,10 +6,16 @@ export const router = Router();
 router.post('/api', async (req, res) => {
     try {
         const { name, familyName, guestsNumber, isAttending }: Invite = req.body;
+
+        console.log('Incoming request:', req.body);
+
         const userData = await Rsvp.create({ name, familyName, guestsNumber, isAttending });
-        console.log('מוזמן נרשם במאגר המידע בהצלחה');
-        res.status(201).send({userData})
+
+        console.log('User data created:', userData);
+
+        res.status(201).send({ userData })
     } catch (error) {
-        console.log('failed to create rsvp', error);
+        console.log('Failed to create RSVP:', error);
+        res.status(500).send('Failed to create RSVP');
     }
 });
