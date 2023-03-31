@@ -15,6 +15,7 @@ export function app(): express.Express {
   const server = express();
   server.use(json());
   server.use(urlencoded({ extended: true }));
+  server.use(router);
   const distFolder = join(process.cwd(), 'dist/sagiv-wedding/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
 
@@ -24,7 +25,6 @@ export function app(): express.Express {
   server.set('views', distFolder);
   server.get('*.*', express.static(distFolder, { maxAge: '1y' }));
 
-  server.use(router)
 
   server.get('*', (req, res) => {
     res.render(indexHtml, { req, providers: [{ provide: APP_BASE_HREF, useValue: req.baseUrl }] });

@@ -14,6 +14,8 @@ export class SaveComponent implements OnInit {
     if (isPlatformBrowser(this.platformId)){
       const {userData} = JSON.parse(localStorage.getItem('rsvp') ?? '');
       this.userData = userData;
+      console.log(this.userData);
+      
     }
   }
 }

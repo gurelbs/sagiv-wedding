@@ -24,7 +24,6 @@ export class InviteFormComponent implements OnInit {
 
   onSubmit() {
     if (this.rsvpForm.valid) {
-      console.log(this.rsvpForm.value);
       this.http.post('/api/rsvp', this.rsvpForm.value).subscribe(
         (res) => {
           console.log('Success:', res);
@@ -33,7 +32,7 @@ export class InviteFormComponent implements OnInit {
         },
         (error) => {
           console.error('Failed to save RSVP', error);
-          this.router.navigate(['/404']);
+          this.router.navigate(['/save']);
         }
       );
     }
