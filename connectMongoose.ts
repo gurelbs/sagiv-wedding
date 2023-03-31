@@ -2,7 +2,10 @@ import { config } from "dotenv";
 import mongoose, { ConnectOptions } from "mongoose";
 
 export function connectMongoose(){
-    config()
+    config();
+    if (process.env['NODE_ENV'] !== 'production'){
+        config({ path: `.env.local`, override: true });
+    }
     const { MONGODB_URI } = process.env;    
     try {
         mongoose.connect(MONGODB_URI ?? '', {

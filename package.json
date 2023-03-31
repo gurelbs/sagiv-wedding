@@ -9,7 +9,7 @@
     "test": "ng test",
     "dev": "ng run sagiv-wedding:serve-ssr",
     "serve:ssr": "node dist/sagiv-wedding/server/main.js",
-    "build:ssr": "ng build && ng run sagiv-wedding:server",
+    "build:ssr": "ng build --configuration production && ng run sagiv-wedding:server",
     "prerender": "ng run sagiv-wedding:prerender",
     "vercel-build": "npm run build:ssr"
   },
@@ -27,6 +27,7 @@
     "@angular/platform-server": "^15.2.0",
     "@angular/router": "^15.2.0",
     "@nguniversal/express-engine": "^15.0.0",
+    "@vercel/node": "^2.10.2",
     "body-parser": "^1.20.2",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
