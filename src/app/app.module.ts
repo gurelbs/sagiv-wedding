@@ -18,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
 // components
 import { AppComponent } from './app.component';
 import { InviteFormComponent } from './invite-form/invite-form.component';
-import { MenuComponent } from './menu/menu.component';
 import { SaveComponent } from './save/save.component';
 import { MainComponent } from './main/main.component';
 import { AllGuestsComponent } from './all-guests/all-guests.component';
@@ -26,7 +25,6 @@ import { AllGuestsComponent } from './all-guests/all-guests.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuComponent,
     InviteFormComponent,
     SaveComponent,
     MainComponent,
