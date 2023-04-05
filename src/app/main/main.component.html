@@ -1,41 +1,44 @@
-<img [src]="'https://images.unsplash.com/photo-1614660676530-73068d28ce84'" alt="My Image">
+<img [src]="'https://images.unsplash.com/photo-1614660676530-73068d28ce84'" alt="My Image" class="bg-image">
 
 <div class="container">
     <pre>"אֶתֵּן לָהּ שׁוֹשַׁנִּים, צְרוֹר דֻּבְדְּבָנִים וְשִׁיר עִם מַנְגִּינָה"</pre>
-    <h1>הזמנה לחתונה</h1>
-    <h2>נרגשים להזמינכם להשתתף בשמחתינו</h2>
-    <p>
-        <strong>חן עדי</strong>
-        & 
-        <strong>שגיב</strong>
-    </p>
-    <p>request the pleasure of your company</p>
-    <p>at the celebration of their union</p>
+    <h1>שגיב & חן עדי</h1>
+    <p>מתחתנים</p>
+    <div class="love">
+        <mat-icon>favorite</mat-icon>
+    </div>
+    <p>אנו שמחים ונרגשים להזמין אתכם לחגוג עמנו את יום נישואינו</p>
     <div class="line"></div>
     <div class="event-info">
-    <p><strong>Date:</strong> Saturday, May 14th, 2023</p>
-    <p><strong>Time:</strong> 3:00 PM</p>
-    <p><strong>Location:</strong> The Grand Hotel</p>
+        <div>
+            <mat-icon>date_range</mat-icon>
+            <p>יום רביעי, י"ט אייר  ה'תשפ"ג</p>
+            <p>Wednesday, 10 May 2023</p>
+        </div>
+        <div>
+            <div>
+                <mat-icon>location_on</mat-icon>
+            </div>
+            <a [href]="config.location.google">ווין אולם אירועים, עמק חפר</a>
+            <div class="location-icons">
+                <div class="location google-location">
+                    <a [href]="config.location.google">
+                        <img src="../../assets/googleMaps.svg" alt="" width="48" height="48">
+                    </a>
+                </div>
+                <div class="location waze-location">
+                    <a [href]="config.location.waze">
+                        <img src="../../assets/waze.png" alt="" width="48" height="48">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div>
+            <mat-icon>view_timeline</mat-icon>
+            <p>קבלת פנים</p>
+        </div>
     </div>
     <div class="line"></div>
-    <h2>Event Timeline</h2>
-    <ul class="event-timeline">
-    <li>
-        <p>3:00 PM - Ceremony</p>
-    </li>
-    <li>
-        <p>4:00 PM - Cocktail Hour</p>
-    </li>
-    <li>
-        <p>5:00 PM - Dinner Reception</p>
-    </li>
-    <li>
-        <p>8:00 PM - Dancing and Celebration</p>
-    </li>
-    </ul>
-    <div class="line"></div>
-    <p>Kindly RSVP by April 30th, 2023</p>
-<p>Contact us at <a href="mailto:brideandgroom@example.com">brideandgroom@example.com</a> with any questions or concerns</p>
 </div>
 
 <div class="form-wrapper">

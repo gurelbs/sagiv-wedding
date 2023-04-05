@@ -2,8 +2,11 @@ form {
     display: flex;
     position: relative;
     flex-direction: column;
-    padding: 40px;
+    padding: 1rem;
     mat-form-field {
         width: 100%;
+        div {
+            border-radius: 10px;
+        }
     }
 }

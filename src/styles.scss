@@ -8,3 +8,12 @@ html, body {
     direction: rtl;
     margin: 0;
 }
+
+a {
+    text-decoration: none;
+    color: #f5deb3;
+    transition: .3s ease;
+    &:hover {
+        color: #b1883c;
+    }
+}
