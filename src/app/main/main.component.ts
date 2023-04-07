@@ -1,17 +1,21 @@
-import { Component } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Component, OnInit } from '@angular/core';
 import config from './main.config';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent {
-  constructor(private sanitizer: DomSanitizer) { }
+export class MainComponent implements OnInit {
 
   config = config;
+  googleEventLink!: string;
 
-  getSafeUrl(url: string) {
-    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  ngOnInit() {
+    this.googleEventLink = this.createGoogleEvent();
+  }
+
+  createGoogleEvent(){
+    const { name, date, endDate, details } = config.googleEvent;
+    return `http://www.google.com/calendar/event?action=TEMPLATE&text=${name}&dates=${date}/${endDate}&details=${details}&location=${config.location.google}&trp=false&sprop=&sprop=name:`
   }
 }

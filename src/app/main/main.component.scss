@@ -14,9 +14,16 @@
     padding: 1rem;
     background: transparent;
     color: white;
+    p {
+        font-size: 22px;
+    }
     pre {
         font-style: italic;
         margin-bottom: 1rem;
+        font-size: 16px;
+    }
+    a {
+        font-size: 16px;
     }
     h1 {
         font-size: 3rem;
@@ -40,7 +47,19 @@
         display: grid;
         place-items: center;
         div {
-            margin: 20px 0;
+            margin-top: 20px;;
+        }
+    }
+    // .location-and-event {
+    //     display: flex;
+    //     justify-content: space-evenly;
+    //     width: 100%;
+    // }
+    .add-to-calendar {
+        display: grid;
+        place-items: center;
+        pre { 
+            font-style: normal;
         }
     }
     .location-icons {
@@ -50,6 +69,25 @@
         div {
             margin: 10px;
         }
+    }
+}
+
+.form-wrapper {
+    display: grid;
+    place-items: center;
+    color: white;
+}
+
+::ng-deep {
+    app-invite-form {
+        place-self: normal;
+        .mdc-text-field {
+            border-radius: 10px;
+        }
+    }
+    .mdc-list-item__primary-text {
+        margin-left: auto;
+        margin-right: initial !important;
     }
 }
 

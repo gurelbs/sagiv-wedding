@@ -1,4 +1,4 @@
-<img src="../../assets/bg.jpg" alt="My Image" class="bg-image">
+<img src="../../assets/bg.jpg" alt="background Image" class="lazy bg-image">
 
 <div class="container">
     <pre>"אֶתֵּן לָהּ שׁוֹשַׁנִּים, צְרוֹר דֻּבְדְּבָנִים וְשִׁיר עִם מַנְגִּינָה"</pre>
@@ -10,37 +10,48 @@
     <p>אנו שמחים ונרגשים להזמין אתכם לחגוג עמנו את יום נישואינו</p>
     <div class="line"></div>
     <div class="event-info">
-        <div>
+        <div class="date-wrapper">
             <mat-icon>date_range</mat-icon>
             <p>יום רביעי, י"ט אייר  ה'תשפ"ג</p>
-            <p>Wednesday, 10 May 2023</p>
-        </div>
-        <div>
-            <div>
-                <mat-icon>location_on</mat-icon>
-            </div>
-            <a [href]="config.location.google">ווין אולם אירועים, עמק חפר</a>
-            <div class="location-icons">
-                <div class="location google-location">
-                    <a [href]="config.location.google">
-                        <img src="../../assets/googleMaps.svg" alt="" width="48" height="48">
-                    </a>
-                </div>
-                <div class="location waze-location">
-                    <a [href]="config.location.waze">
-                        <img src="../../assets/waze.png" alt="" width="48" height="48">
-                    </a>
-                </div>
-            </div>
+            <p>Wednesday, 10.05.2023</p>
         </div>
         <div>
             <mat-icon>view_timeline</mat-icon>
-            <p>קבלת פנים</p>
+            <p>קבלת פנים - 19:30</p>
+            <p>חופה וקידושין - 20:30</p>
+        </div>
+        <div class="location-and-event">
+            <div>
+                <div>
+                    <mat-icon>location_on</mat-icon>
+                </div>
+                <a [href]="config.location.google" target="_blank" rel="nofollow">ווין אולם אירועים, עמק חפר</a>
+                <div class="location-icons">
+                    <div class="location google-location">
+                        <a [href]="config.location.google" target="_blank" rel="nofollow">
+                            <img src="../../assets/googleMaps.svg" alt="" width="48" height="48">
+                        </a>
+                    </div>
+                    <div class="location waze-location">
+                        <a [href]="config.location.waze" target="_blank" rel="nofollow">
+                            <img src="../../assets/waze.png" alt="" width="48" height="48">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <a [href]="googleEventLink" target="_blank" rel="nofollow" class="add-to-calendar">
+                    <pre>קליק להוספה ליומן</pre>
+                    <img src="../../assets/calendar.png" alt="" width="42" height="42">
+                </a>                
+            </div>
         </div>
     </div>
     <div class="line"></div>
 </div>
-
 <div class="form-wrapper">
+    <img src="../../assets/rings.png" alt="" width="100" height="100">
+    <h1>אישור הגעה</h1>
+    <h4>נשמח לראותכם בין אורחינו</h4>
     <app-invite-form></app-invite-form>
 </div>
