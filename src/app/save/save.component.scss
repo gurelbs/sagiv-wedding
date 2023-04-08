@@ -1,0 +1,23 @@
+:host {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    height: 100vh;
+    background: linear-gradient(75deg, royalblue, aqua);
+    padding: 0 16px;
+    .container {
+        display: grid;
+        place-items: center;
+        text-align: center;
+        h2 {
+            font-size: 4rem;
+            line-height: 65px;
+            font-weight: 700;
+            color: floralwhite;
+        }
+        p {
+            font-size: 2rem;
+            line-height: 30px;
+        }
+    }
+}

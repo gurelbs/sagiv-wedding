@@ -1,15 +1,21 @@
-<div *ngIf="userData?.isAttending === 'Yes'">
-    <h2>תודה!</h2>
+<ng-container class="container" *ngIf="userData?.isAttending === 'Yes'; else isNotAttending">
+  <div class="container">
+    <img src="../../assets/happy.gif" alt="background Image" class="lazy">
+    <h2>תודה רבה</h2>
     <p>אנחנו מצפים לראות אותך בחתונה</p>
   </div>
-  
-  <div *ngIf="userData?.isAttending === 'No'">
-    <h2>תודה!</h2>
-    <p>אנחנו מצטערים שלא תוכל להגיע...תמיד תוכל לחזור ולעדכן</p>
+</ng-container>
+
+<ng-template #isNotAttending class="container">
+  <div class="container">
+    <img src="../../assets/sad.gif" alt="background Image" class="lazy">
+    <h2>תודה רבה</h2>
+    <p>כמה חבל שאתם לא מגיעים<br>אבל זכרו שתמיד תוכלו לגשת שוב להזמנה ולעדכן הגעה</p>
   </div>
+</ng-template>
   
-  <div *ngIf="!userData">
-    <h2>אופסי...</h2>
-    <p>משהו כאן השתבש... אפשר לנסות שנית מאוחר יותר</p>
-  </div>
+<div *ngIf="!userData">
+  <h2>אופסי...</h2>
+  <p>משהו כאן השתבש... אפשר לנסות שנית מאוחר יותר</p>
+</div>
   
