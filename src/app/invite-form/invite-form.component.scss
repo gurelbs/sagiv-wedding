@@ -10,3 +10,9 @@ form {
         }
     }
 }
+
+@media screen and (min-width: 1024px) {
+    form {
+        padding: 3rem;
+    }
+}

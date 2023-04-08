@@ -64,11 +64,6 @@
             margin-top: 20px;;
         }
     }
-    // .location-and-event {
-    //     display: flex;
-    //     justify-content: space-evenly;
-    //     width: 100%;
-    // }
     .add-to-calendar {
         display: grid;
         place-items: center;
@@ -90,6 +85,8 @@
     display: grid;
     place-items: center;
     color: white;
+    height: min-content;
+    padding: 1rem;
 }
 
 ::ng-deep {
@@ -109,6 +106,19 @@
     :host {
         display: grid;
         grid-template: auto/1fr 1fr;
+        .container {
+            .event-info {
+                place-items: normal;
+                div {
+                    margin-top: 10px;
+                }
+            }
+            .location-and-event {
+                display: flex;
+                justify-content: space-between;
+                place-items: center;
+            }
+        }
     }
 }
 

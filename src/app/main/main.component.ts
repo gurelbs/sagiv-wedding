@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import config from './main.config';
+import { DeviceService } from '../devices.service';
 @Component({
   selector: 'app-main',
   templateUrl: './main.component.html',
@@ -7,8 +8,10 @@ import config from './main.config';
 })
 export class MainComponent implements OnInit {
 
+  constructor(private deviceService: DeviceService){}
   config = config;
   googleEventLink!: string;
+  sizes = this.deviceService;
 
   ngOnInit() {
     this.googleEventLink = this.createGoogleEvent();
