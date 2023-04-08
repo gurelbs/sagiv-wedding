@@ -9,6 +9,10 @@ html, body {
     margin: 0;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 a {
     text-decoration: none;
     color: #f5deb3;

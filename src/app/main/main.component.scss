@@ -43,6 +43,20 @@
         background-color: #DDD;
         margin: 20px 0;
     }
+    .date-wrapper {
+        mat-icon {
+            margin-bottom: 20px;
+        }
+    }
+    .timeline-text {
+        display: flex;
+        flex-direction: columns;
+        justify-content: space-between;
+        p {
+            line-height: 25px;
+            padding: 0 20px;
+        }
+    }
     .event-info {
         display: grid;
         place-items: center;
@@ -88,6 +102,13 @@
     .mdc-list-item__primary-text {
         margin-left: auto;
         margin-right: initial !important;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    :host {
+        display: grid;
+        grid-template: auto/1fr 1fr;
     }
 }
 
