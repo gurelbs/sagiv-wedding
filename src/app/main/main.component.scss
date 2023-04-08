@@ -106,6 +106,8 @@
     :host {
         display: grid;
         grid-template: auto/1fr 1fr;
+        place-items: center;
+        height: 100vh;
         .container {
             .event-info {
                 place-items: normal;
@@ -119,6 +121,10 @@
                 place-items: center;
             }
         }
+        .form-wrapper {
+            width: 80%;
+        }
+        
     }
 }
 
