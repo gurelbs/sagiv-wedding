@@ -1,12 +1,15 @@
-
-* {
-    font-family: 'Rubik', 'M PLUS Rounded 1c', 'Solitreo', sans-serif;
+@font-face {
+    font-family: 'anka';
+    src: url('assets/fonts/anka.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 
 html, body { 
     height: 100%;
     direction: rtl;
     margin: 0;
+    font-family: 'anka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
