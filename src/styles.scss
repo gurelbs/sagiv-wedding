@@ -1,15 +1,17 @@
 @font-face {
     font-family: 'anka';
     src: url('assets/fonts/anka.ttf') format('truetype');
-    font-weight: normal;
+    font-weight: 100 1000;
     font-style: normal;
+    
 }
 
+
 html, body { 
+    font-family: 'Varela Round', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 100%;
     direction: rtl;
     margin: 0;
-    font-family: 'anka', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
@@ -20,7 +22,10 @@ a {
     text-decoration: none;
     color: #f5deb3;
     transition: .3s ease;
-    &:hover {
-        color: #b1883c;
-    }
+    font-size: 18px;
+    font-weight: 800;
+}
+
+@mixin textShadow {
+    text-shadow: 1px 1px 5px black;
 }
