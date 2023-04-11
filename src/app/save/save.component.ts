@@ -13,9 +13,7 @@ export class SaveComponent implements OnInit {
   ngOnInit() {
     if (isPlatformBrowser(this.platformId)){
       const {userData} = JSON.parse(localStorage.getItem('rsvp') ?? '');
-      this.userData = userData;
-      console.log(this.userData);
-      
+      this.userData = userData;      
     }
   }
 }

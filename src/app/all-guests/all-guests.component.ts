@@ -13,7 +13,6 @@ export class AllGuestsComponent implements OnInit {
   ngOnInit(): void {
     this.http.get('/all-guests').subscribe(
       (res: any) => {
-        console.log('Success:', res);
         this.allGuests = res.allGuests;
       },
       (error) => {
