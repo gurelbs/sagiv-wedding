@@ -17,7 +17,7 @@
             <p>Wednesday, 10.05.2023</p>
         </div>
         <div>
-            <mat-icon>view_timeline</mat-icon>
+            <mat-icon *ngIf="!sizes.isDesktop()">view_timeline</mat-icon>
             <div class="timeline-text">
                 <p>קבלת פנים<br>19:30</p>
                 <p>חופה וקידושין<br> 20:30</p>
