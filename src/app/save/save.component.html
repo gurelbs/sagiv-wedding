@@ -1,6 +1,6 @@
 <ng-container class="container" *ngIf="userData?.isAttending === 'Yes'; else isNotAttending">
   <div class="container">
-    <img src="../../assets/images/happy.gif" alt="background Image" class="lazy">
+    <img src="../../assets/images/happy.gif" alt="background Image" class="lazy" width="250" height="250">
     <h2>תודה רבה</h2>
     <p>אנחנו מצפים לראות אותך בחתונה</p>
   </div>
@@ -8,7 +8,7 @@
 
 <ng-template #isNotAttending class="container">
   <div class="container">
-    <img src="../../assets/images/sad.gif" alt="background Image" class="lazy">
+    <img src="../../assets/images/sad.gif" alt="background Image" class="lazy" width="250" height="250">
     <h2>תודה רבה</h2>
     <p>כמה חבל שאתם לא מגיעים<br>אבל זכרו שתמיד תוכלו לגשת שוב להזמנה ולעדכן הגעה</p>
   </div>
