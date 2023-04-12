@@ -18,6 +18,12 @@
     background: transparent;
     color: white;
     font-family: 'Rubik', sans-serif;
+    .scale {
+        transition: .3s ease;
+        &:hover, &:focus {
+            scale: 1.3;
+        }
+    }
     p, small, a {
         @include textShadow;
     }
@@ -37,7 +43,7 @@
         display: block;
         font-style: italic;
         margin-bottom: 20px;
-        font-size: 16px;
+        font-size: 14px;
         font-family: 'Varela Round', sans-serif;
     }
     h1 {
@@ -48,9 +54,9 @@
     .love {
         margin: 30px;
         mat-icon {
-            scale: 2;
+            scale: 2.5;
             color: #f06262; 
-            animation: love 1.6s infinite ease-in-out;
+            animation: love 1.3s infinite ease-in-out;
         }
     }
     .line {
@@ -101,6 +107,7 @@
 .form-wrapper {
     display: grid;
     place-items: center;
+    text-align: center;
     color: white;
     height: min-content;
     padding: 1rem;
